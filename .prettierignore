@@ -1,0 +1,52 @@
+# ----------------------------
+# Build outputs
+# ----------------------------
+dist/
+build/
+out/
+.next/
+coverage/
+storybook-static/
+
+# ----------------------------
+# Package managers + cache
+# ----------------------------
+node_modules/
+.pnp/
+.pnp.js
+.npm/
+.yarn/
+.bun/
+.cache/
+turbo/
+.tmp/
+*.log
+
+# ----------------------------
+# Environment files
+# ----------------------------
+.env
+.env.* 
+
+# ----------------------------
+# Docker + deployment
+# ----------------------------
+docker-data/
+docker/
+*.tar
+*.img
+
+# ----------------------------
+# OS files
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# Locks (optional, you can include if you don’t want formatting on them)
+package-lock.json
+
+# ----------------------------
+# Vercel + Railway config
+# ----------------------------
+.vercel/

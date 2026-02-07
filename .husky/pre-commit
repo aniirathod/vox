@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+
+# Define Colors
+BLUE='\033[1;34m'
+GREEN='\033[1;32m'
+CYAN='\033[1;36m'
+RESET='\033[0m'
+
+# Print Banner
+echo ""
+echo "${BLUE}=========================================${RESET}"
+echo "${CYAN}   🎨  VOX DESIGN SYSTEM CHECK   ${RESET}"
+echo "${BLUE}=========================================${RESET}"
+echo ""
+
+# 1. FORMATTING ONLY
+# We only run Prettier to fix visuals instantly.
+echo "${BLUE}▶ Running Prettier on staged files...${RESET}"
+npx lint-staged
+
+if [ $? -eq 0 ]; then
+  echo ""
+  echo "${GREEN}✔ Formatting complete. Committing...${RESET}"
+  echo ""
+fi
