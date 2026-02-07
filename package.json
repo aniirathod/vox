@@ -13,7 +13,7 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "check-types": "turbo run check-types",
     "clean": "turbo run clean && rm -rf node_modules",
-    "prepare": "husky || true"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,md}": "prettier --write"
