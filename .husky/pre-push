@@ -11,7 +11,7 @@ echo "${YELLOW}🚧 Initializing Turbo Engine...${RESET}"
 
 # Run Checks: Types, Tests, AND LINTING
 # We use --output-logs=new-only to keep the output clean
-CI=true npx turbo run type-check lint --output-logs=new-only
+CI=true npx turbo run check-types lint --output-logs=new-only
 
 # Capture Exit Code
 RESULT=$?
