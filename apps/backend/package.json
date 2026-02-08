@@ -1,0 +1,46 @@
+{
+  "name": "@vox/backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.ts",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:push": "prisma db push",
+    "prisma:studio": "prisma studio"
+  },
+  "keywords": [
+    "voice",
+    "ai",
+    "website-builder",
+    "generative-ui"
+  ],
+  "author": "Aniket",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@deepgram/sdk": "^4.11.3",
+    "@google/genai": "^1.40.0",
+    "@prisma/adapter-pg": "^7.3.0",
+    "@prisma/client": "^7.3.0",
+    "axios": "^1.13.4",
+    "cors": "^2.8.6",
+    "dotenv": "^16.0.3",
+    "express": "^5.2.1",
+    "groq-sdk": "^0.37.0",
+    "multer": "^2.0.2",
+    "openai": "^6.18.0",
+    "pg": "^8.18.0",
+    "prisma": "^7.3.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^22.19.9",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2"
+  }
+}

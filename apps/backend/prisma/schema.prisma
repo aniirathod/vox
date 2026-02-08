@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String?  @unique
+  isGuest   Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  websites  Website[]
+}
+
+model Website {
+  id         String   @id @default(cuid())
+  user       User     @relation(fields: [userId], references: [id])
+  userId     String
+  slug       String   @unique
+  title      String
+  layoutJson Json
+  content    Json
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([userId])
+}
